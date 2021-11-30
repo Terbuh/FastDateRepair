@@ -1,0 +1,37 @@
+{
+  "preset": "ts-jest",
+  "moduleFileExtensions": ["js", "jsx", "json", "ts", "tsx"],
+  "rootDir": "src",
+  "testRegex": "/__tests__/.*\\.test\\.tsx?$",
+  "setupFilesAfterEnv": ["<rootDir>/setup-tests.ts"],
+  "transform": {
+    ".+\\.(css|styl|less|sass|scss)$": "react-scripts/config/jest/cssTransform.js"
+  },
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file-mock.ts"
+  },
+  "testEnvironment": "jest-environment-jsdom-fourteen",
+  "testPathIgnorePatterns": ["<rootDir>/../(build|docs|node_modules)/"],
+  "coverageDirectory": "../coverage",
+  "collectCoverageFrom": [
+    "<rootDir>/app/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/store/**/*.{js,jsx,ts,tsx}",
+    "!<rootDir>/**/*.d.ts"
+  ],
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/serviceWorker.ts",
+    "<rootDir>/index.tsx"
+  ],
+  "coverageReporters": ["json", "lcov", "text", "clover", "cobertura"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 24,
+      "functions": 20,
+      "lines": 35,
+      "statements": 34
+    }
+  },
+  "errorOnDeprecated": true,
+  "clearMocks": true,
+  "testResultsProcessor": "jest-sonar-reporter"
+}
