@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import './Questionaire.css'
 import ChooseService from "./ChooseService";
 import ChooseRepair from "./ChooseRepair";
+import Button from '@mui/material/Button';
 // import CarDate from './ChooseYear';
 
 
@@ -11,13 +12,18 @@ import ChooseRepair from "./ChooseRepair";
 export default function Questionaire() {
 
     return (
+        <div className='Box-wrapper'>
         <Box
             component="form"
             sx={{
-                '& .MuiTextField-root': { m: 1, width: '25ch' },
+                borderRadius: '10%',
+                backgroundColor: 'rgba(0,0,0,0.2)',
+                width: 450,
+
             }}
             noValidate
             autoComplete="off"
+
         >
             <div className="content">
                 <h2>Workshop</h2>
@@ -51,9 +57,9 @@ export default function Questionaire() {
                     type="number"
                     label="Year - Datepicker myślę"
                 />
-
-
+                <Button variant="contained">Check</Button>
             </div>
         </Box>
+        </div>
     );
 }
