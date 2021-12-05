@@ -4,6 +4,9 @@
 
 html {
     font-family: sans-serif;
+    background-image: url("./assets/backgrounds/2020-dodge-challenger-77-b77b467,0,0,0,0.jpg");
+    background-repeat: no-repeat ;
+    background-size: 100%;
 }
 
 body {

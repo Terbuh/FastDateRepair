@@ -2,7 +2,9 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import './Questionaire.css'
-import BasicSelect from "./Choose service";
+import ChooseService from "./ChooseService";
+import ChooseRepair from "./ChooseRepair";
+// import CarDate from './ChooseYear';
 
 
 
@@ -18,40 +20,39 @@ export default function Questionaire() {
             autoComplete="off"
         >
             <div className="content">
+                <h2>Workshop</h2>
+                <ChooseService/>
+                <h2>Services</h2>
 
-                <BasicSelect
-
-                />
-
+                <ChooseRepair/>
                 <TextField
                     required
-                    id="outlined-disabled"
-                    label="Wybierz usługę"
-                    defaultValue="Wybierz usługę"
+                    id="outlined-basic"
+                    label="Type your car brand"
+                />
+                <TextField
+                    required
+                    id="outlined-basic"
+                    label="Type your car model"
+                />
+                <TextField
+                    required
+                    id="outlined-basic"
+                    label="VIN"
+                />
+                <TextField
+                    required
+                    id="outlined-basic"
+                    label="Engine capacity"
+                />
+                <TextField
+                    required
+                    id="outlined-basic"
+                    type="number"
+                    label="Year - Datepicker myślę"
                 />
 
-                <TextField
-                    id="outlined-password-input"
-                    label="Required"
-                    type="password"
-                    autoComplete="Przewidywany koszt"
-                />
-                <TextField
-                    id="outlined-read-only-input"
-                    label="Required"
-                    defaultValue="Hello World"
-                    InputProps={{
-                        readOnly: true,
-                    }}
-                />
-                <TextField
-                    id="outlined-number"
-                    label="Numer"
-                    type="number"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                />
+
             </div>
         </Box>
     );

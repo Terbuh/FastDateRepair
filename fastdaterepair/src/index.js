@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
-import Questionaire from "./app/components/Questionaire";
+import App from "./App";
 
-ReactDOM.render(<Questionaire />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
